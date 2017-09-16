@@ -2,7 +2,7 @@ package com.lofm.examples
 
 import java.util.*
 
-class Customer(val id: Int, var name: String = "", val yearOfBirth: Int){
+class CustomerExample(val id: Int, var name: String = "", val yearOfBirth: Int){
     /*init {
         name = name.toUpperCase()
     }
@@ -28,7 +28,7 @@ class Customer(val id: Int, var name: String = "", val yearOfBirth: Int){
 }
 
 fun main(args: Array<String>) {
-    val customer = Customer(13, "Omar", 1983)
+    val customer = CustomerExample(13, "Omar", 1983)
     //La siguiente línea asigna el valor a ssnValue y la función set asigna el valor de ssnValue al field de socialSecurityNumber
     customer.socialSecurityNumber = "SN12346789"
     /*val customer2 = Customer(13, yearOfBirth = 1983)
