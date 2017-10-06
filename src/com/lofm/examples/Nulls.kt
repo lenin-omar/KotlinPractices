@@ -2,7 +2,7 @@ package com.lofm.examples
 
 fun main(args: Array<String>) {
     val message: String = "A message"   //Si se asigna null no permite compilar
-    val nullMessage: String? = null //La interrogacion permite valores null
+    var nullMessage: String? = null //La interrogacion permite valores null
     val inferredNull = null  //Sin tipo de dato ni interrogacion
 
     /*
@@ -12,7 +12,9 @@ fun main(args: Array<String>) {
     }
     */
 
-    println(nullMessage!!.length)
+    nullMessage = "Some Value"
+    println(nullMessage.length)
+    //println(nullMessage!!.length)
 
     /*
     val customerJava = CustomerJava()

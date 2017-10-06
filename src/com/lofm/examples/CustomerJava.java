@@ -29,6 +29,10 @@ public class CustomerJava {
         this.email = email;
     }
 
+    public void prettyPrint() {
+        System.out.println("Pretty print method from java class");
+    }
+
 
     @Override
     public String toString() {

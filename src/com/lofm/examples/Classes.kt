@@ -25,6 +25,7 @@ class CustomerExample(val id: Int, var name: String = "", val yearOfBirth: Int){
             }
             field = ssnValue
         }
+
 }
 
 fun main(args: Array<String>) {
