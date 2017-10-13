@@ -1,5 +1,7 @@
 package com.lofm.examples;
 
+import org.jetbrains.annotations.NotNull;
+
 public class CustomerJava {
     private int id;
     private String name;
@@ -31,6 +33,15 @@ public class CustomerJava {
 
     public void prettyPrint() {
         System.out.println("Pretty print method from java class");
+    }
+
+    @NotNull
+    public String neverNull() {
+        return "A String";
+    }
+
+    public String sometimesNull() {
+        return "A String";
     }
 
 

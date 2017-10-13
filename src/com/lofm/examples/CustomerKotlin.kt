@@ -1,9 +1,37 @@
 package com.lofm.examples
 
+import java.io.IOException
+
 data class CustomerKotlin(var id: Int, var name: String, var email: String) {
+
+    @JvmField val someField = "Some Field"
+
     override fun toString(): String {
         return return "{\"id\": \"$id\", \"name\": \"$name\"}"
     }
+
+    @JvmOverloads fun changeStatus(status: Status = Status.Current) {
+        //Do something
+    }
+
+    @JvmName("preferential") fun makePrefered() {
+        //Do something
+    }
+
+    @Throws(IOException::class) fun loadStatistics(fileName: String) {
+        if (fileName == "") {
+            throw IOException("filename can not be blank")
+        }
+    }
+}
+
+fun CustomerKotlin.entendedFunction() {
+    //Do something
+}
+
+enum class Status {
+    Current,
+    Past
 }
 
 fun main(args: Array<String>) {

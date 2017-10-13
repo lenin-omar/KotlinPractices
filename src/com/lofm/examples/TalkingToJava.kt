@@ -8,6 +8,14 @@ fun main(args: Array<String>) {
     customer.prettyPrint()  //Return type = Unit because is Java void
     val runnable = Runnable { println("Invoking runnable") }
     runnable.run()
+
+    val kci = KotlinCustomerImplementation()
+    val customerJava = kci.getById(10)
+    //customerJava.id   //Warning: Value could be null if ? is present in function header
+
+    customerJava.neverNull()
+    customerJava.sometimesNull()
+
 }
 
 class PersonKotlin: PersonJava() {
@@ -17,7 +25,7 @@ class PersonKotlin: PersonJava() {
 }
 
 class KotlinCustomerImplementation: CustomerInterface {
-    override fun getById(id: Int): CustomerJava {
+    override fun getById(id: Int): CustomerJava {  //If ? is present the value can be null
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
