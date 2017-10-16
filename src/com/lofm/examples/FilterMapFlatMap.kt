@@ -30,6 +30,7 @@ val albums = listOf(
 )
 
 fun albumAndTrackLowerThanXSeconds(durationInSeconds:Int, albums: List<Album>): List<Pair<String, String>> {
+    //flatMap applies everything that is inside to a collections of collections (every track in every album)
     return albums.flatMap {
         val albumTitle = it.title
         it.tracks.filter {
@@ -90,6 +91,9 @@ fun main(args: Array<String>) {
     //Another way to print it. Since Album is a data class it has a toString function and prints nicely
     titleYear.forEach { println(it) }
 
-
+    //Call to a function that uses flatMap
+    albumAndTrackLowerThanXSeconds(200, albums).forEach {
+        println("Album: ${it.first} - Track: ${it.second}")
+    }
 
 }
